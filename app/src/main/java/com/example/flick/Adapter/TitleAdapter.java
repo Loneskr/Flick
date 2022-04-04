@@ -17,8 +17,8 @@ public class TitleAdapter extends RecyclerView.Adapter<TitleAdapter.ViewHolder> 
     private ArrayList<PhotoNameResponse> photoNames;
 
 
-    public TitleAdapter(ArrayList<PhotoNameResponse> photoNameResponses) {
-        this.photoNames = photoNameResponses;
+    public TitleAdapter(ArrayList<PhotoNameResponse> photoTitleName) {
+        this.photoNames = photoTitleName;
     }
 
     @NonNull
