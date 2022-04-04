@@ -2,7 +2,7 @@ package com.example.flick.Network;
 
 import com.google.gson.annotations.SerializedName;
 
-public class PhotoName {
+public class PhotoNameResponse {
     @SerializedName("title")
     private String title;
 

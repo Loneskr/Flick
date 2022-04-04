@@ -1,6 +1,5 @@
 package com.example.flick.Adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,17 +8,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.flick.Network.PhotoName;
+import com.example.flick.Network.PhotoNameResponse;
 import com.example.flick.R;
 
 import java.util.ArrayList;
 
 public class TitleAdapter extends RecyclerView.Adapter<TitleAdapter.ViewHolder> {
-    private ArrayList<PhotoName> photoNames;
+    private ArrayList<PhotoNameResponse> photoNames;
 
 
-    public TitleAdapter(ArrayList<PhotoName> flickResponses) {
-        this.photoNames = flickResponses;
+    public TitleAdapter(ArrayList<PhotoNameResponse> photoNameResponses) {
+        this.photoNames = photoNameResponses;
     }
 
     @NonNull
@@ -31,7 +30,7 @@ public class TitleAdapter extends RecyclerView.Adapter<TitleAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        PhotoName photoName = photoNames.get(position);
+        PhotoNameResponse photoName = photoNames.get(position);
         holder.textView.setText(photoName.getTitle());
     }
 

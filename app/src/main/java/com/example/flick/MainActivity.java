@@ -13,7 +13,7 @@ import com.example.flick.Adapter.TitleAdapter;
 import com.example.flick.Handler.ApiHandler;
 import com.example.flick.Network.IApiService;
 import com.example.flick.Network.MainResponse;
-import com.example.flick.Network.PhotoName;
+import com.example.flick.Network.PhotoNameResponse;
 
 import java.util.ArrayList;
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private GridLayoutManager gridLayoutManager;
     private TitleAdapter titleAdapter;
-    private ArrayList<PhotoName> photoNames;
+    private ArrayList<PhotoNameResponse> photoNames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onFailure(Call<MainResponse> call, Throwable t) {
                     AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
-                    alertDialog.setTitle(t.getLocalizedMessage()).setNegativeButton("XUI", new DialogInterface.OnClickListener() {
+                    alertDialog.setTitle(t.getLocalizedMessage()).setNegativeButton("Error", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
 
